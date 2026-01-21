@@ -71,6 +71,6 @@ class Api {
   }
 }
 
-const api = new Api("https://api.web-project-around.ignorelist.com/");
+const api = new Api("http://localhost:3001/");
 
 export default api;

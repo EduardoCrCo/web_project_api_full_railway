@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -6,14 +6,14 @@ const UserSchema = new mongoose.Schema({
     required: true,
     minlength: 2,
     maxlength: 30,
-    default: 'Jacques Cousteau',
+    default: "Jacques Cousteau",
   },
   about: {
     type: String,
     required: true,
     minlength: 2,
     maxlength: 30,
-    default: 'Explorador',
+    default: "Explorador",
   },
   avatar: {
     type: String,
@@ -21,12 +21,13 @@ const UserSchema = new mongoose.Schema({
     validate: {
       validator(v) {
         return /^(http|https):\/{2}[._~:\/?%#\]@!$&'()*+,;=A-Za-z0-9\-]+/.test(
-          v,
-        )
+          v
+        );
       },
       message: (props) => `${props.value} is not a valid http address`,
     },
-    default: 'https://example.com/default-avatar.png',
+    default:
+      "https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png",
   },
   email: {
     type: String,
@@ -35,8 +36,8 @@ const UserSchema = new mongoose.Schema({
     validate: {
       validator(v) {
         return /^((?!\.)[\w\-_.]*[^.])(@[\w-]+)(\.[\w-]+(\.[\w-]+)?[^.\W])$/.test(
-          v,
-        )
+          v
+        );
       },
       message: (props) => `${props.value} is not a valid email address`,
     },
@@ -46,8 +47,8 @@ const UserSchema = new mongoose.Schema({
     required: true,
     select: false, // para que al hacer consultas no se devuelva el password
   },
-})
+});
 
-const User = mongoose.model('user', UserSchema)
+const User = mongoose.model("user", UserSchema);
 
-export default User
+export default User;
