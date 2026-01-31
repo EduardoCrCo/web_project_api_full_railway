@@ -11,6 +11,9 @@
     "build": "echo 'No build needed for Node.js'",
     "railway:deploy": "npm install && npm start"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
