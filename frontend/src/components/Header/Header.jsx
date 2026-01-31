@@ -1,4 +1,4 @@
-import Logo from "../../images/logo.svg";
+import Logo from "../../images/alrededorMexico.png";
 import Line from "../../images/Line.svg";
 import { Link, useLocation } from "react-router-dom";
 import "../../../src/blocks/header.css";
