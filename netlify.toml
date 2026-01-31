@@ -5,3 +5,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# SPA redirect - todas las rutas van a index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
