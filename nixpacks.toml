@@ -1,8 +1,8 @@
 [providers]
 node = "18"
 
-[build]
+[phases.build]
 cmd = "cd backend && npm install"
 
-[start]
+[phases.start]
 cmd = "cd backend && npm start"
