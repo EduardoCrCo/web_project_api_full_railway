@@ -33,9 +33,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001", // Frontend Vite
   "http://localhost:3002", // Frontend alternativo
-  "https://web-project-around.ignorelist.com",
-  "https://www.web-project-around.ignorelist.com",
-  "https://api.web-project-around.ignorelist.com",
+  process.env.FRONTEND_URL, // 👈 URL de Netlify en producción
 ];
 
 app.use((req, res, next) => {
